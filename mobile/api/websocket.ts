@@ -11,12 +11,10 @@ export function connectWebSocket(token: string, roomId: number, username: string
     webSocketFactory: () => new SockJS(`${BASE_URL}/ws`),
     connectHeaders: { Authorization: `Bearer ${token}` },
     onConnect: () => {
-      // Личный канал — карты видны нам (работает после WebSocketAuthInterceptor)
       stompClient!.subscribe(`/user/queue/game/${roomId}`, (msg) => {
         useGameStore.getState().setGameState(JSON.parse(msg.body));
       });
 
-      // Публичный — без карт, но сохраняем свои карты из предыдущего стейта
       stompClient!.subscribe(`/topic/game/${roomId}`, (msg) => {
         const newState = JSON.parse(msg.body);
         const prev = useGameStore.getState().gameState;

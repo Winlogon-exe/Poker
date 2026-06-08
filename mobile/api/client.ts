@@ -1,9 +1,8 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Tunnel URL (ngrok/cloudflare). Обновить когда запустишь тоннель.
-// Пример ngrok: https://xxxx-xx-xx-xxx.ngrok-free.app
-// Пример локально (если телефон в той же сети): http://192.168.1.XXX:8080
+// ngrok: https://xxxx-xx-xx-xxx.ngrok-free.app
+// локально (если телефон в той же сети): http://192.168.1.XXX:8080
 const BASE_URL = 'http://192.168.1.65:8088';
 
 export const api = axios.create({ baseURL: BASE_URL });
