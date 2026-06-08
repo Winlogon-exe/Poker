@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "PokerApp",
+    "slug": "poker-app",
+    "version": "1.0.0",
+    "orientation": "default",
+    "scheme": "poker",
+    "userInterfaceStyle": "dark",
+    "splash": { "backgroundColor": "#111111" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.poker.app" },
+    "android": { "adaptiveIcon": { "backgroundColor": "#111111" }, "package": "com.poker.app" },
+    "plugins": ["expo-router"]
+  }
+}

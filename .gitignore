@@ -1,0 +1,13 @@
+**/node_modules/
+**/target/
+*.log
+*.db
+*.mv.db
+*.trace.db
+.expo/
+.expo-shared/
+dist/
+build/
+coverage/
+.env
+.env.*
