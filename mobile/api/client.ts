@@ -3,8 +3,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // ngrok: https://xxxx-xx-xx-xxx.ngrok-free.app
 // локально (если телефон в той же сети): http://192.168.1.XXX:8080
-const BASE_URL = 'http://192.168.1.65:8088';
-
+//const BASE_URL = 'http://192.168.1.65:8080';
+const BASE_URL = 'http://89.185.85.7:8088';
 export const api = axios.create({ baseURL: BASE_URL });
 
 api.interceptors.request.use(async (config) => {
